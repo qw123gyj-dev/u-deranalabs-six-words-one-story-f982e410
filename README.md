@@ -4,8 +4,12 @@
 
 # Six Words, One Story
 
-A complete story in exactly six words. A wrong is done, a forgiveness is given, and the one who needed it most never learns — a whole life of guilt, grace, and silence, told in a single breath.
+A complete story in exactly six words. `main.ts` writes the story to `entry.txt`, enforcing the six-word gate and the 1–60 character gate, then reads the file back and verifies the bytes match.
 
-> She forgave him. He never knew.
+> "She forgave him. He never knew."
 
-`main.ts` writes the story to `$MAKEFUN_OUTPUT_DIR/entry.txt` (falling back to `/output/entry.txt`), validates the exactly-six-words gate, and reads the file back to verify the bytes match.
+Run it with:
+
+```sh
+MAKEFUN_OUTPUT_DIR=/tmp/sixwords-out2 node main.ts
+```
